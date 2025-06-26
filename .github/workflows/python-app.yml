@@ -20,20 +20,25 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Set up Python 3.13
-      uses: actions/setup-python@v3
+      uses: actions/setup-python@v5
       with:
         python-version: "3.13"
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip
-        pip install flake8 pytest
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Lint with flake8
+        pip install uv
+        make install
+    - name: Run linter and pytest
       run: |
-        # stop the build if there are Python syntax errors or undefined names
-        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
-        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-    - name: Test with pytest
-      run: |
-        pytest
+        make check
+#    - name: Test with pytest
+#      run: |
+#        pytest
+    - name: SonarQubeScan
+      uses: SonarSource/sonarqube-scan-action@v5
+      env:
+        SONAR_TOKEN: ${{ 685a91c6b2ecf26b44dc70cb68b5ed0b392ec2ca }}
+      with:
+        args: >
+          -Dsonar.projectKey=pilgrim-nord_python-project-50
+          -Dsonar.organization=pilgrim-nord-1
+          -Dsonar.python.coverage.reportPaths=coverage.xml
