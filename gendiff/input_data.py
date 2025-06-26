@@ -9,8 +9,8 @@ def input_data(data):
 
 
 # def main():
-    # file1 = input_data("gendiff/inputs/file1.json")
-    # file2 = input_data("gendiff/inputs/file2.json")
+    # file1 = input_data("gendiff/test-data/file1.json")
+    # file2 = input_data("gendiff/test-data/file2.json")
     #
     # print(file1)
     # print(file2)

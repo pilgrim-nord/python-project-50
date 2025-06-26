@@ -1,7 +1,7 @@
 from gendiff.input_data import input_data
 
-# file1 = input_data("gendiff/inputs/file1.json")
-# file2 = input_data("gendiff/inputs/file2.json")
+# file1 = input_data("gendiff/test-data/file1.json")
+# file2 = input_data("gendiff/test-data/file2.json")
 # print(file2)
 def generate_diff(path_file1, path_file2):
     file1 = input_data(path_file1)
@@ -34,8 +34,8 @@ def generate_diff(path_file1, path_file2):
 
 
 # def main():
-#     file1 = input_data("../inputs/file1.json")
-#     file2 = input_data("../inputs/file2.json")
+#     file1 = input_data("../test-data/file1.json")
+#     file2 = input_data("../test-data/file2.json")
 # # print(file2)
 #     print(generate_diff(file1, file2))
 
