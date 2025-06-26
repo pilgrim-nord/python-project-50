@@ -36,7 +36,7 @@ jobs:
     - name: SonarQubeScan
       uses: SonarSource/sonarqube-scan-action@v5
       env:
-        SONAR_TOKEN: ${{ 685a91c6b2ecf26b44dc70cb68b5ed0b392ec2ca }}
+        SONAR_TOKEN: ${{685a91c6b2ecf26b44dc70cb68b5ed0b392ec2ca}}
       with:
         args: >
           -Dsonar.projectKey=pilgrim-nord_python-project-50
