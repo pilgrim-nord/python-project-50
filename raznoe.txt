@@ -1,1 +1,3 @@
-uv run gendiff gendiff/inputs/file1.json gendiff/inputs/file2.json
+uv run gendiff gendiff/tests/fixtures/file1.json gendiff/tests/fixtures/file2.json
+
+uv run gendiff gendiff/tests/fixtures/file1.yaml gendiff/tests/fixtures/file2.yaml
