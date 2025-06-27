@@ -30,3 +30,15 @@ jobs:
     - name: Run linter and pytest
       run: |
         make check
+    - name: Run test with coverage
+      run: |
+        make test-coverage
+    - name: SonarQube Scan
+      uses: SonarSource/sonarqube-scan-action@v5
+      env:
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      with:
+        args: >
+          -Dsonar.projectKey=pilgrim-nord_python-project-50
+          -Dsonar.organization=pilgrim-nord-1
+          -Dsonar.python.coverage.reportPaths=coverage.xml
