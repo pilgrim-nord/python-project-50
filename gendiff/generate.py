@@ -1,4 +1,5 @@
 from gendiff.diff_tree import make_diff_tree
+from gendiff.formatter.plain import plain
 from gendiff.formatter.stylish import stylish
 from gendiff.input_data import input_data
 
@@ -9,5 +10,7 @@ def generate_diff(file_path1, file_path2, format_name='stylish'):
     unformatted_diff = make_diff_tree(data1, data2)
     if format_name == "stylish":
         return stylish(unformatted_diff)
+    elif format_name == "plain":
+        return plain(unformatted_diff)
     else:
         return "Unsupported format"
