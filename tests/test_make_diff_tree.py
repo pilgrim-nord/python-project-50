@@ -1,0 +1,34 @@
+from pathlib import Path
+from gendiff.diff_tree import make_diff_tree
+from gendiff.input_data import input_data
+from gendiff.formatter.stylish import stylish
+
+test_data_dir = Path(__file__).parent / "test_data"
+
+def test_make_diff_tree_json():
+
+    expected_file_path = test_data_dir / "diff_result_stylish.txt"
+    with open(expected_file_path, "r") as file:
+        expected = file.read()
+    file1_path_json = test_data_dir / "file1.json"
+    file2_path_json = test_data_dir / "file2.json"
+    data1_json = input_data(file1_path_json)
+    data2_json = input_data(file2_path_json)
+    diff = make_diff_tree(data1_json, data2_json)
+    diff_stylish = stylish(diff)
+    assert diff_stylish == expected
+
+def test_make_diff_tree_yaml():
+
+    expected_file_path = test_data_dir / "diff_result_stylish.txt"
+    with open(expected_file_path, "r") as file:
+        expected = file.read()
+
+    file1_path_yaml = test_data_dir / "file1.yaml"
+    file2_path_yaml = test_data_dir / "file2.yaml"
+    data1_yaml = input_data(file1_path_yaml)
+    data2_yaml = input_data(file2_path_yaml)
+    diff = make_diff_tree(data1_yaml, data2_yaml)
+    diff_stylish = stylish(diff)
+
+    assert diff_stylish == expected
