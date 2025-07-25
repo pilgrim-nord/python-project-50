@@ -16,7 +16,7 @@ force-install:
 lint:
 	uv run ruff check gendiff
 
-lint-with-fix:
+lint-with-makefix:
 	uv run ruff check gendiff --fix
 
 check: test lint
