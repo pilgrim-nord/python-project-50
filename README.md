@@ -16,3 +16,5 @@ asciinema with tree
 [![asciicast](https://asciinema.org/a/sQONlEMAFSJ7L7MSjgjOZOeDX.svg)](https://asciinema.org/a/sQONlEMAFSJ7L7MSjgjOZOeDX)
 asciinema with plain
 [![asciicast](https://asciinema.org/a/BOjAn8GyqFDWlGxrYOc7c1jyF.svg)](https://asciinema.org/a/BOjAn8GyqFDWlGxrYOc7c1jyF)
+asciinema with json
+[![asciicast](https://asciinema.org/a/4eDf9FcF82uAdDp0TwnAPVwON.svg)](https://asciinema.org/a/4eDf9FcF82uAdDp0TwnAPVwON)
