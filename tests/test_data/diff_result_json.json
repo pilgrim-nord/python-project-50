@@ -5,7 +5,7 @@
         "value": [
             {
                 "key": "follow",
-                "operation": "add",
+                "operation": "added",
                 "new": false
             },
             {
@@ -26,12 +26,12 @@
             },
             {
                 "key": "setting4",
-                "operation": "add",
+                "operation": "added",
                 "new": "blah blah"
             },
             {
                 "key": "setting5",
-                "operation": "add",
+                "operation": "added",
                 "new": {
                     "key5": "value5"
                 }
@@ -59,7 +59,7 @@
                     },
                     {
                         "key": "ops",
-                        "operation": "add",
+                        "operation": "added",
                         "new": "vops"
                     }
                 ]
@@ -103,7 +103,7 @@
     },
     {
         "key": "group3",
-        "operation": "add",
+        "operation": "added",
         "new": {
             "deep": {
                 "id": {

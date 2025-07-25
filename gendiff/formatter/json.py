@@ -1,5 +1,5 @@
-import json
+import json as json_module
 
 
-def json(diff) -> str:
-    return json.dumps(diff, indent=4)
+def json(diff):
+    return json_module.dumps(diff, indent=4)

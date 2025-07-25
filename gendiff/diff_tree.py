@@ -1,5 +1,5 @@
 def make_diff_tree(parced_data1, parced_data2):
-    diff = list()
+    diff = []
     sorted_keys = sorted(parced_data1.keys() | parced_data2.keys())
     for key in sorted_keys:
         if key not in parced_data1:

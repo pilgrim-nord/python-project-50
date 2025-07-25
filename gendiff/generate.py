@@ -1,4 +1,5 @@
 from gendiff.diff_tree import make_diff_tree
+from gendiff.formatter.json import json
 from gendiff.formatter.plain import plain
 from gendiff.formatter.stylish import stylish
 from gendiff.input_data import input_data
@@ -12,5 +13,7 @@ def generate_diff(file_path1, file_path2, format_name='stylish'):
         return stylish(unformatted_diff)
     elif format_name == "plain":
         return plain(unformatted_diff)
+    elif format_name == "json":
+        return json(unformatted_diff)
     else:
         return "Unsupported format"
