@@ -7,6 +7,7 @@ from gendiff.formatter.plain import plain
 
 test_data_dir = Path(__file__).parent / "test_data"
 
+
 def test_generate_diff():
 
     expected_file_path = test_data_dir / "diff_result_stylish.txt"
@@ -16,6 +17,7 @@ def test_generate_diff():
     file_path2 = test_data_dir / "file2.json"
     diff_default = generate_diff(file_path1, file_path2)
     assert diff_default == expected
+
 
 def test_make_diff_tree_json_stylish():
 
@@ -29,6 +31,7 @@ def test_make_diff_tree_json_stylish():
     diff = make_diff_tree(data1_json, data2_json)
     diff_stylish = stylish(diff)
     assert diff_stylish == expected
+
 
 def test_make_diff_tree_yaml_stylish():
 
@@ -56,6 +59,7 @@ def test_plain():
     diff = make_diff_tree(data1_json, data2_json)
     diff_plain = plain(diff)
     assert diff_plain == expected
+
 
 def test_json():
 
