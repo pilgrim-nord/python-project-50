@@ -59,8 +59,8 @@ def test_json():
     data1_json = input_data(file1_path_json)
     data2_json = input_data(file2_path_json)
     diff = make_diff_tree(data1_json, data2_json)
-    print("Получившийся")
-    print(diff)
+    # print("Получившийся")
+    # print(diff)
     # diff_json = json(diff)
     # pprint.pprint(diff_json)
     assert diff == expected
