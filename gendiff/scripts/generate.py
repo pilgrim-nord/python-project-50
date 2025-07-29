@@ -1,8 +1,8 @@
-from gendiff.diff_tree import make_diff_tree
-from gendiff.formatter.json import json
-from gendiff.formatter.plain import plain
-from gendiff.formatter.stylish import stylish
-from gendiff.input_data import input_data
+from gendiff.formatters.json import json
+from gendiff.formatters.plain import plain
+from gendiff.formatters.stylish import stylish
+from gendiff.scripts.diff_tree import make_diff_tree
+from gendiff.scripts.input_data import input_data
 
 
 def generate_diff(file_path1, file_path2, format_name='stylish'):

@@ -1,9 +1,9 @@
 from pathlib import Path
-from gendiff.diff_tree import make_diff_tree
-from gendiff.generate import generate_diff
-from gendiff.input_data import input_data
-from gendiff.formatter.stylish import stylish
-from gendiff.formatter.plain import plain
+from gendiff.scripts.diff_tree import make_diff_tree
+from gendiff.scripts.generate import generate_diff
+from gendiff.scripts.input_data import input_data
+from gendiff.formatters.stylish import stylish
+from gendiff.formatters.plain import plain
 
 test_data_dir = Path(__file__).parent / "test_data"
 
